@@ -10,7 +10,9 @@ class Users(models.Model):
  
     def __unicode__(self):
         return self.username
-
+    """
+    元类，默认类值
+    """
     class Meta:
         verbose_name = u'用户信息'
         verbose_name = u'用户信息管理'
