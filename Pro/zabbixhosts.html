@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    zabbix 主机列表：
+    {% for i in Host %}
+    {{ i }}   <!-- jinja2 usage: {{ i|add:'.html' }} ，一般的变量之类的用双大括号（变量），-->
+    <!-- 功能类的，比如循环，条件判断是用括号加%号（标签）-->
+    {% endfor %}
+
+    {% for i in Host_Name %}
+    {{ i }}
+    {% endfor %}
+
+</body>
+</html>

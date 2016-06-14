@@ -5,6 +5,8 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    TutorList = ["django", "mysql", "bootstrap"]
-    for i in TutorList:
-        return render(request, 'home.html',  {"%s.html"}) %i
+    TutorList = ["hosts", "mysql", "bootstrap"]
+    return render(request, 'home.html', {'TutorList': TutorList})
+
+def hosts(request):
+    return render(request, 'hosts.html')
